@@ -22,4 +22,7 @@ int main() {
             zero++;
     }
 
-    printf("Positive
+    printf("Positive=%d, Negative=%d, Zero=%d", pos, neg, zero);
+
+    return 0;
+}
