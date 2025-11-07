@@ -1,0 +1,24 @@
+//Q64: Find the digit that occurs the most times in an integer number.
+
+#include <stdio.h>
+
+int main() {
+    int n, d, f[10] = {0}, i, max = 0, ans = 0;
+    scanf("%d", &n);
+
+    while(n > 0) {
+        d = n % 10;
+        f[d]++;
+        n /= 10;
+    }
+
+    for(i = 0; i < 10; i++) {
+        if(f[i] > max) {
+            max = f[i];
+            ans = i;
+        }
+    }
+
+    printf("%d", ans);
+    return 0;
+}
